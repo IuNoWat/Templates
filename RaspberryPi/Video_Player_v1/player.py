@@ -72,7 +72,7 @@ class Player() :
 
 if __name__=="__main__" :
 
-    default_vid_path="C:/Users/lorenzo.jacques/Desktop/robot_nul.mp4"
+    default_vid_path="/home/pi/Desktop/robot_nul.mp4"
 
     player=Player()
 
