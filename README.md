@@ -9,6 +9,8 @@ I'm changing how the video players on raspi are handled. To projects will coexis
 
 The old files have been put in old
 
+pyvidplayer2 is not efficient enough, even on a raspi4. For now, python-vlc prove to be the best alternative, pyvideo will not be used for now
+
 ## 2025_07_16
 
 I was having issues with working on a Raspberry Pi with VS Code throught SSH. Sometimes, the Pi would freeze and force me to hard reboot it.
@@ -43,27 +45,26 @@ It seem like systemd --user shouldl be preferd in all cases.
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
 
-### Video_Player_v1
+### pyvideo
 
 The video player is based on pyvidplayer2 : https://github.com/anrayliu/pyvidplayer2
 The test program have very low performance on raspi 3b : around 3 fps
-I'm switching to python-vlc in Video_v2
+I'm switching to python-vlc in vlcvideo
 
 #### TO DO
 - [x] Test the test program on a Raspberry Pi 4B 4G
     - This programm run at 16 fps on raspi4 4G. So i'm separating the project in two : pyvideo to use pyvidplayer2 and vlcvideo to use python-vlc. The rest is saved in old.
+- [ ] Find a way to have better performances
 
-### Video_v2
+### vlcvideo
 
 Since pyvidplayer2 shows huge performances issues ont Raspi 3, I tried another approach, based on this video : https://www.youtube.com/watch?v=Y3SJ8qLqQA8
 
-- video2.py allows you to play a video in fullscreen one time
-- video2_loop.py allows you to play a video in fullscreen and loop on it
-- video2_interact.py allows you to play a video in fullscreen and have tactile buttons to control it. It's not finished yet
-
-Those can be played at startup throug systemd --user with the service placed in ~/.config/systemd/user/
+- vlcvideo.py allows you to play a video in fullscreen one time
+- vlcvideo_loop.py allows you to play a video in fullscreen and loop on it
+- a readme file explain how to use this folder
 
 #### TO DO
 - [x] Debug launching video_vlc.py through systemd
-- [ ] Finish video2_interact
+- [ ] Finish vlcvideo_interact.py
 
