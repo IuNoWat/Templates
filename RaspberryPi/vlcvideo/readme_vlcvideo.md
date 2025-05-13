@@ -4,6 +4,7 @@ On a brand new pi, you will have to :
 - git clone the Templates repo : git clone https://github.com/IuNoWat/Templates.git
 - create a video_env on Desktop : python -m venv /home/pi/Desktop/video_env
 - install vlc/python bindings : /home/pi/Desktop/video_env/pip install python-vlc
+- IF YOU WANT TO USE THE AUDIO JACK OUTPUT : Connect something on the jack, and enable it via sudo raspi-config
 - download the video on Desktop
 - copy vlcvideo_loop.py on Desktop and rename it video.py
 - open it and change the name of the video
