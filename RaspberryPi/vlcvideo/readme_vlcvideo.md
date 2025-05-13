@@ -11,12 +11,12 @@ On a brand new pi, you will have to :
 - go to /etc/xdg/autostart : cd /etc/xdg/autostart
 - create a .desktop file : sudo nano video.desktop
 - add following lines :
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Video
-Exec=bash /home/pi/Desktop/autostart.sh
-Type=Application
-Terminal=true
+    - #!/usr/bin/env xdg-open
+    - [Desktop Entry]
+    - Name=Video
+    - Exec=bash /home/pi/Desktop/autostart.sh
+    - Type=Application
+    - Terminal=true
 - reboot pi
 
 
