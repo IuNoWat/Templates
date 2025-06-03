@@ -3,3 +3,5 @@ Premiers test sur arduino, beaucoup plus stable et intuitifs que dans mes souven
 
 J'ai fait un premier petit code, qui me permet de contrôler la position d'une lumière sur un ring led à partir d'un potentiomètre.
 
+Tuto Analog : https://docs.arduino.cc/built-in-examples/basics/AnalogReadSerial/
+Tuto RingLed NeoPixel : https://medium.com/@elonskolnik/arduino-uno-tutorial-neopixel-ring-setup-9fafc099c89a
