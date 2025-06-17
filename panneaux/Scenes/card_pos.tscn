@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1mvp6527pu86"]
+
+[ext_resource type="Texture2D" uid="uid://dbh2s2ddkp3vw" path="res://Assets/Fichier 1.png" id="1_b6b2j"]
+[ext_resource type="Script" uid="uid://dwa3rlnyl7njy" path="res://Scenes/card_pos.gd" id="1_pucxn"]
+
+[node name="card_pos" type="Node2D" groups=["cards"]]
+script = ExtResource("1_pucxn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b6b2j")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -30.0
+offset_top = -74.0
+offset_right = 30.0
+offset_bottom = 73.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -99.0
+offset_right = 19.0
+offset_bottom = -76.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

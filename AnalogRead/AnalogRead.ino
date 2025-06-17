@@ -10,5 +10,5 @@ void loop() {
   // put your main code here, to run repeatedly:
   value=analogRead(0);
   Serial.println(value);
-
+  delay(200);
 }

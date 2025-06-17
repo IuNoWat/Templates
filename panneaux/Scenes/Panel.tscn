@@ -1,0 +1,184 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckc1q7cb0k7eb"]
+
+[ext_resource type="Script" uid="uid://b6xnrdhmmn8t6" path="res://Scenes/panel.gd" id="1_1me5u"]
+
+[sub_resource type="Theme" id="Theme_vbotw"]
+
+[node name="Panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1me5u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.117647, 0.262745, 0.584314, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme = SubResource("Theme_vbotw")
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -436.0
+offset_top = -51.5
+offset_right = 436.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 75
+text = "Bienvenue dans ce QCM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ceci est un sous-titre pour présenter votre QCM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 25
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
+
+Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
+
+Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
+
+[node name="Control2" type="Control" parent="VBoxContainer/Control3"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Control3/Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control3/Control2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ceci est un sous-titre pour présenter votre QCM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/Control2/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 25
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
+
+Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
+
+Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Control3/Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control3/Control2/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ceci est un sous-titre pour présenter votre QCM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/Control2/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 25
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
+
+Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
+
+Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme = SubResource("Theme_vbotw")
+
+[node name="Button" type="Button" parent="VBoxContainer/Control"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "COMMENCER
+"
+
+[connection signal="pressed" from="VBoxContainer/Control/Button" to="." method="_on_button_pressed"]
