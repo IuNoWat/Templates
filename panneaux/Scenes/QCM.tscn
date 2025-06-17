@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cninjlkkmtxs2"]
+[gd_scene load_steps=3 format=3 uid="uid://cninjlkkmtxs2"]
+
+[ext_resource type="Script" uid="uid://b5yycw7r8rr0e" path="res://Scenes/qcm.gd" id="1_rqgi1"]
 
 [sub_resource type="Theme" id="Theme_repdd"]
 
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rqgi1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -156,3 +159,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "COMMENCER
 "
+
+[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer3/Button" to="." method="_on_button_pressed"]
