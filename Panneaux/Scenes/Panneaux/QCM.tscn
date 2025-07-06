@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cninjlkkmtxs2"]
+[gd_scene load_steps=3 format=3 uid="uid://d1d1r74mxi1bh"]
 
-[ext_resource type="Script" uid="uid://b5yycw7r8rr0e" path="res://Scenes/qcm.gd" id="1_rqgi1"]
+[ext_resource type="Script" uid="uid://b5yycw7r8rr0e" path="res://Scripts/QCM.gd" id="1_isbeq"]
+[ext_resource type="Script" uid="uid://3wlv71llye" path="res://Scenes/Panneaux/QCM_button.gd" id="2_w2085"]
 
-[sub_resource type="Theme" id="Theme_repdd"]
-
-[node name="Control" type="Control"]
+[node name="QCM" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rqgi1")
+script = ExtResource("1_isbeq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -20,146 +19,144 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.117647, 0.262745, 0.584314, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control2" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-theme = SubResource("Theme_repdd")
-
-[node name="Label" type="Label" parent="VBoxContainer/Control2"]
+[node name="msg_loose" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -436.0
-offset_top = -51.5
-offset_right = 436.0
-offset_bottom = 51.5
+offset_left = -374.0
+offset_top = -184.0
+offset_right = 374.0
+offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 75
-text = "QUESTION ?"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Control3" type="Control" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control3"]
+[node name="ColorRect2" type="ColorRect" parent="msg_loose"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 30.0
-offset_right = -30.0
-offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
-alignment = 1
+color = Color(1, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control3/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
+[node name="loose_button" type="Button" parent="msg_loose"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -118.0
+offset_right = 197.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Continuer"
 
-[node name="Label" type="Label" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(600, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Réponse 1"
+[node name="Label" type="Label" parent="msg_loose"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.5
+offset_right = 197.5
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 120
+text = "PERDU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 25
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
+[node name="msg_win" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = -184.0
+offset_right = 374.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
 
-Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
+[node name="ColorRect2" type="ColorRect" parent="msg_win"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)
 
-Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
+[node name="win_button" type="Button" parent="msg_win"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -118.0
+offset_right = 197.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Continuer"
 
-[node name="Button" type="Button" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(350, 100)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "COMMENCER
-"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Control3/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(600, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Réponse 1"
+[node name="Label" type="Label" parent="msg_win"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.5
+offset_right = 197.5
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 120
+text = "GAGNE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 25
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
-
-Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
-
-Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
-
-[node name="Button" type="Button" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(350, 100)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "COMMENCER
-"
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Control3/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(600, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Réponse 1"
+[node name="Titre" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "TITRE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 25
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id mauris quis lacus pharetra ultrices. Praesent a turpis a felis viverra vestibulum eget ac nunc. Etiam viverra lacus vel sem bibendum, non lacinia arcu facilisis. Maecenas vitae ipsum metus. Maecenas in euismod enim. Fusce luctus sem id consequat mattis. Sed luctus sagittis lacinia. In molestie fermentum ex ut malesuada. Fusce sapien lorem, pretium vitae nunc a, mattis ullamcorper tortor. Nullam mollis accumsan magna nec volutpat. Morbi hendrerit, magna non laoreet luctus, neque tellus fermentum est, vel volutpat nulla mauris a enim.
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Default Button"
+script = ExtResource("2_w2085")
 
-Phasellus tempor luctus sapien et fermentum. Pellentesque ut sem nec ligula mollis consectetur. Nulla a ante gravida metus laoreet pellentesque. Etiam pulvinar metus lectus, non dapibus nisl aliquet sed. Nam id augue convallis, blandit massa in, mattis velit. Donec ac sodales nisl, in interdum metus. Integer ligula metus, consectetur sed ornare maximus, eleifend sit amet mi. Duis lacus nisi, malesuada in sollicitudin nec, facilisis vulputate diam. Nam elementum semper risus ut vulputate. Ut cursus tincidunt ornare.
-
-Aliquam erat volutpat. Cras scelerisque dolor vel nisi iaculis hendrerit. Mauris quis elementum nisi. Aliquam sit amet sem mollis, consequat risus a, maximus tellus. Maecenas sollicitudin eu massa a eleifend. Pellentesque accumsan luctus porta. Etiam tristique fermentum maximus. Vestibulum bibendum id arcu ut bibendum. Pellentesque quis porttitor augue. "
-
-[node name="Button" type="Button" parent="VBoxContainer/Control3/HBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(350, 100)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "COMMENCER
-"
-
-[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Control3/HBoxContainer/VBoxContainer3/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="msg_loose/loose_button" to="." method="_on_loose_button_pressed"]
+[connection signal="pressed" from="msg_win/win_button" to="." method="_on_win_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

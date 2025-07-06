@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Panneaux"
-run/main_scene="uid://ckc1q7cb0k7eb"
+run/main_scene="uid://b633w6cn3mqxs"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
