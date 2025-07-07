@@ -1,0 +1,24 @@
+ID;type;Valeur
+0;type;PANEL
+0;titre;Titre du panneau 1
+0;texte;Texte du panneau 1
+1;type;QCM
+1;titre;Titre du panneau 2 (QCM)
+1;win;2
+1;nb;3
+1;Q_texte_0;Texte réponse 1
+1;Q_texte_1;Texte réponse 2
+1;Q_texte_2;Texte réponse 3
+1;Q_msg_0;Message réponse 1
+1;Q_msg_1;Message réponse 2
+1;Q_msg_2;Message réponse 3
+2;win;1
+2;type;QCM
+2;titre;Titre du panneau 3 (QCM)
+2;nb;3
+2;Q_texte_0;Texte réponse 1
+2;Q_texte_1;Texte réponse 2
+2;Q_texte_2;Texte réponse 3
+2;Q_msg_0;Message réponse 1
+2;Q_msg_1;Message réponse 2
+2;Q_msg_2;Message réponse 3

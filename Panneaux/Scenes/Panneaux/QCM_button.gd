@@ -1,2 +1,3 @@
 extends Button
-var id=0
+
+var id

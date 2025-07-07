@@ -9,7 +9,7 @@ func _ready() -> void:
 	print("PANEL alive with id : "+str(id))
 
 func _process(delta: float) -> void :
-	get_node("Titre").text=title+" n°"+str(id)
+	get_node("Titre").text=title
 	get_node("Texte").text=text
 
 func _on_button_pressed() -> void:
