@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfhrdemhn7aiw"]
 
-[ext_resource type="Script" uid="uid://biju8js6rrf7g" path="res://Scripts/global.gd" id="1_d088b"]
+[ext_resource type="Script" uid="uid://b7hbnkd8id3xx" path="res://Scripts/POS.gd" id="1_7whng"]
 
 [sub_resource type="Theme" id="Theme_4w3t1"]
 
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_d088b")
+script = ExtResource("1_7whng")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

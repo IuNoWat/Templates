@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1d1r74mxi1bh"]
+[gd_scene load_steps=2 format=3 uid="uid://d1d1r74mxi1bh"]
 
 [ext_resource type="Script" uid="uid://b5yycw7r8rr0e" path="res://Scripts/QCM.gd" id="1_isbeq"]
-[ext_resource type="Script" uid="uid://cq5dhi17ijerp" path="res://Scenes/Panneaux/QCM_button.gd" id="2_w2085"]
 
 [node name="QCM" type="Control"]
 layout_mode = 3
@@ -20,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="msg_loose" type="Control" parent="."]
+[node name="msg" type="Control" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -35,7 +34,7 @@ offset_bottom = 311.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect2" type="ColorRect" parent="msg_loose"]
+[node name="ColorRect" type="ColorRect" parent="msg"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 0, 1)
 
-[node name="loose_button" type="Button" parent="msg_loose"]
+[node name="msg_button" type="Button" parent="msg"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.73
@@ -59,7 +58,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 80
 text = "Continuer"
 
-[node name="Label" type="Label" parent="msg_loose"]
+[node name="msg_title" type="Label" parent="msg"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -71,79 +70,12 @@ text = "PERDU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="text" type="RichTextLabel" parent="msg_loose"]
+[node name="msg_text" type="RichTextLabel" parent="msg"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.235
 anchor_right = 1.0
 anchor_bottom = 0.701
-offset_left = 20.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Default"
-
-[node name="msg_win" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -374.0
-offset_top = -312.0
-offset_right = 374.0
-offset_bottom = 312.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect2" type="ColorRect" parent="msg_win"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 1, 0, 1)
-
-[node name="win_button" type="Button" parent="msg_win"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.758
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = 50.0
-offset_right = -100.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 80
-text = "Continuer"
-
-[node name="Label" type="Label" parent="msg_win"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -197.5
-offset_right = 197.5
-offset_bottom = 165.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 120
-text = "GAGNE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="text" type="RichTextLabel" parent="msg_win"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.245
-anchor_right = 1.0
-anchor_bottom = 0.712
 offset_left = 20.0
 offset_top = 20.0
 offset_right = -20.0
@@ -179,8 +111,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 36
 text = "Default Button"
-script = ExtResource("2_w2085")
 
-[connection signal="pressed" from="msg_loose/loose_button" to="." method="_on_loose_button_pressed"]
-[connection signal="pressed" from="msg_win/win_button" to="." method="_on_win_button_pressed"]
+[connection signal="pressed" from="msg/msg_button" to="." method="_on_msg_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

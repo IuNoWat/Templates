@@ -22,3 +22,21 @@ ID;type;Valeur
 2;Q_msg_0;Message réponse 1
 2;Q_msg_1;Message réponse 2
 2;Q_msg_2;Message réponse 3
+3;type;PANEL
+3;titre;Titre du panneau 4
+3;texte;Texte du panneau 4
+4;type;POS
+4;titre;Titre du panneau 5
+4;nb;3
+4;C_pos_0;100
+4;C_pos_1;200
+4;C_pos_2;300
+4;C_texte_0;Texte de la Carte 1
+4;C_texte_1;Texte de la Carte 2
+4;C_texte_2;Texte de la Carte 3
+4;C_img_0;Fichier1.png
+4;C_img_1;Fichier2.png
+4;C_img_2;Fichier1.png
+5;type;PANEL
+5;titre;C'EST LA FIN
+5;texte;Merci d'avoir joué
