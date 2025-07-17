@@ -14,7 +14,7 @@ import pigpio
 import music_bib
 
 #CONSTANTS
-#os.system("sudo pigpiod") #pigpoid needs to be launched
+os.system("sudo pigpiod") #pigpoid needs to be launched
 PIN=18
 PI=pigpio.pi()
 DEFAULT_OCTAVE= 6

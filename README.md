@@ -17,6 +17,14 @@ I desactivated all the pluggin, and it work much better now.
 
 # Dependencies and Tutorials
 
+## Using Systemd
+
+Very good explanation here : https://wiki.archlinux.org/title/Systemd/User
+
+It seem like systemd --user shouldl be preferd in all cases.
+
+
+
 ## Arduino
 
 ## Godot
@@ -39,8 +47,14 @@ I'm switching to python-vlc in Video_v2
 ### Video_v2
 
 Since pyvidplayer2 shows huge performances issues ont Raspi 3, I tried another approach, based on this video : https://www.youtube.com/watch?v=Y3SJ8qLqQA8
-The code video_vlc.py works really well on a Raspi 3, but I can't manage to launch it through systemd. I get this error : vlcpulse audio output error: PulseAudio server connection failure: Connection refused
+
+video2.py allows you to play a video in fullscreen one time
+video2_loop.py allows you to play a video in fullscreen and loop on it
+video2_interact.py allows you to play a video in fullscreen and have tactile buttons to control it. It's not finished yet
+
+Those can be played at startup throug systemd --user with the service placed in ~/.config/systemd/user/
 
 #### TO DO
-- [ ] Debug launching video_vlc.py through systemd
+- [x] Debug launching video_vlc.py through systemd
+- [ ] Finish video2_interact
 
