@@ -9,7 +9,6 @@ vid = vlc.Media("/home/pi/Desktop/robot_nul.mp4")
 
 player.set_media(vid)
 
-
 playing=True
 
 def stop() :
