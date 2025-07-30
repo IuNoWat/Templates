@@ -33,7 +33,12 @@ Very good explanation here : https://wiki.archlinux.org/title/Systemd/User
 
 It seem like systemd --user shouldl be preferd in all cases.
 
+## Using the GPIO on Raspberry
 
+Since Bookworm, RPi.GPIO as been deprecated and we have to migrate to gpiozero :
+To install it on a virtalenv, one must install :
+ - pip install gpiozero
+ - pip install lgpio
 
 ## Arduino
 
