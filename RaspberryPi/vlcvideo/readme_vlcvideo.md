@@ -1,5 +1,6 @@
-# How to use vlcvideo
+# ABOUT VLCVIDEO
 
+## Install
 On a brand new pi, you will have to :
 - git clone the Templates repo : git clone https://github.com/IuNoWat/Templates.git
 - create a video_env on Desktop : python -m venv /home/pi/Desktop/video_env
