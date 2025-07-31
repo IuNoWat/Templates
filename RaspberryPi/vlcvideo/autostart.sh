@@ -1,1 +1,0 @@
-/home/pi/Desktop/video_env/bin/python /home/pi/Desktop/video.py

@@ -1,5 +1,4 @@
 import vlc
-import keyboard
 
 instance = vlc.Instance('--input-repeat=-1','--mouse-hide-timeout=0')
 player = instance.media_player_new()
@@ -11,18 +10,9 @@ player.set_media(vid)
 
 playing=True
 
-def stop() :
-    global playing
-    playing=False
-    player.stop()
-
-
-keyboard.add_hotkey("Esc",lambda:stop())
+player.play()
 
 while playing :
     if player.get_state() == vlc.State.Ended and playing :
         player.set_media(vid)
-    player.play()
-
-
-
+        player.play()
