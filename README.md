@@ -71,5 +71,5 @@ Since pyvidplayer2 shows huge performances issues ont Raspi 3, I tried another a
 
 #### TO DO
 - [x] Debug launching video_vlc.py through systemd
-- [ ] Finish vlcvideo_interact.py
+- [x] Finish vlcvideo_interact.py
 
