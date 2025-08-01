@@ -46,6 +46,13 @@ To install it on a virtalenv, one must install :
 
 ## RaspberryPi
 
+### WS2812
+
+Installing everything proved to be a bit hard and confusing. I ended up using directly the rpi-ws281x library : https://pypi.org/project/rpi-ws281x/
+Via : pip install rpi-ws281x
+
+The library must be used with sudo access :(
+
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
