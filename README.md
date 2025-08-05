@@ -53,6 +53,8 @@ Via : pip install rpi-ws281x
 
 The library must be used with sudo access :(
 
+The library also use the PWM output of the pi, disallowing the use of the audio jack. Audio can stil be sent through HDMI or Bluethoot
+
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
