@@ -55,6 +55,17 @@ The library must be used with sudo access :(
 
 The library also use the PWM output of the pi, disallowing the use of the audio jack. Audio can stil be sent through HDMI or Bluethoot
 
+To do so, create a file named asound.conf in /etc/ :
+cd /etc/
+sudo nano asound.conf
+
+There, you can define the default audio output :
+defaults.pcm.card 2
+defaults.ctl.card 2
+
+To check the audio output of the raspberry, use the command : aplay-l
+
+
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
