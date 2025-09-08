@@ -42,6 +42,15 @@ To install it on a virtalenv, one must install :
 
 ## Arduino
 
+### SCREEN_OPEN412
+
+This examples work with this specific model of screen shield for arduino : https://www.lextronic.fr/ecran-graphique-tactile-arduino-open412-40425.html
+It's based on this very good tutorial : https://ouilogique.com/2-4-in_TFT_Touch_screen/
+As it says, you need to install 3 libraries in the arduino IDE (usually in "Documents/Arduino/libraries/ : 
+- git clone https://github.com/adafruit/Adafruit-GFX-Library.git
+- git clone https://github.com/adafruit/TFTLCD-Library.git
+- git clone https://github.com/adafruit/Adafruit_TouchScreen.git
+
 ## Godot
 
 ## RaspberryPi
