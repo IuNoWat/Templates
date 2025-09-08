@@ -55,6 +55,18 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 
 ## RaspberryPi
 
+### Autostart on Raspberry
+- Create the file autostart.sh in Desktop and enter the bash command launching your app : /home/pi/Desktop/my_env_env/bin/python /home/pi/Desktop/my_app
+- Go in /etc/xdg/autostart
+- Create a .desktop file : sudo nano my_app.desktop
+- Enter the following lines :
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=my_app 
+Exec=bash /home/pi/Desktop/autostart.sh
+Type=Application
+Terminal=true
+
 ### WS2812
 
 Installing everything proved to be a bit hard and confusing. I ended up using directly the rpi-ws281x library : https://pypi.org/project/rpi-ws281x/
