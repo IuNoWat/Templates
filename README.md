@@ -55,6 +55,17 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 
 ## RaspberryPi
 
+### Ecran LCD Rond
+This example work with this specific model of lcd round screen : https://www.lextronic.fr/afficheur-lcd-rond-128--78057.html
+There is in the folder a user manual that describe the installation process :
+- Activate SPI interface via sudo raspi-config
+- pip install Pillow
+- pip install numpy
+- sudo apt-get install libopenjp2-7
+- wget https://www.joy-it.net/files/files/Produkte/SBC-LCD1.28R/SBCLCD128R-RPi.zip
+- unzip SBC-LCD128R-RPi.zi
+- Do the connexions as statted in the manual, and the example SBC-LCD128R.py should work
+
 ### Autostart on Raspberry
 - Create the file autostart.sh in Desktop and enter the bash command launching your app : /home/pi/Desktop/my_env_env/bin/python /home/pi/Desktop/my_app
 - Go in /etc/xdg/autostart
@@ -85,7 +96,6 @@ defaults.pcm.card 2
 defaults.ctl.card 2
 
 To check the audio output of the raspberry, use the command : aplay-l
-
 
 ### Buzzer Passif
 
