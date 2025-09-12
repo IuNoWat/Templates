@@ -55,6 +55,11 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 
 ## RaspberryPi
 
+### SerialCom
+
+Example of communication through serial port between a raspi and an arduino.
+It uses pyserial on the py, install it with pip install pyserial
+
 ### Ecran LCD Rond
 This example work with this specific model of lcd round screen : https://www.lextronic.fr/afficheur-lcd-rond-128--78057.html
 There is in the folder a user manual that describe the installation process :
