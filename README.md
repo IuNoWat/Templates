@@ -109,6 +109,13 @@ To check the audio output of the raspberry, use the command : aplay-l
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
 
+There is also a pilot based on gpiozero, buzzer_zero.py
+
+Remember, a buzzer can only be controlled via a PWM-friendly GPIO.
+On Raspberry 4, there are two PWM channel :
+- PWM0_0 available on GPIO 12, 18 or 52. (meaning GPIO12, GPIO18, etc)
+- PWM0_1 available on GPIO 13, 19, 45 or 53
+
 ### pyvideo
 
 The video player is based on pyvidplayer2 : https://github.com/anrayliu/pyvidplayer2
