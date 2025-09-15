@@ -39,6 +39,7 @@ Since Bookworm, RPi.GPIO as been deprecated and we have to migrate to gpiozero :
 To install it on a virtalenv, one must install :
  - pip install gpiozero
  - pip install lgpio
+ - pip install rpi-lgpio
 
 ## Arduino
 
