@@ -35,11 +35,13 @@ if __name__=="__main__" :
     on = True
     while on :
         rah=Arduino()
-        rah.start()
+        #rah.start()
+        rah.send_msg("0#")
+        time.sleep(2)
+        rah.send_msg("0#")
         for i in range(0,10) :
-            time.sleep(1)
-            print(rah.get_msg())
-            rah.send_msg(f"coucou {i} fois\n")
+            time.sleep(2)
+            rah.send_msg(f"00:0{i+1}")
         rah.on=False
-        rah.join()
+        #rah.join()
         on = False
