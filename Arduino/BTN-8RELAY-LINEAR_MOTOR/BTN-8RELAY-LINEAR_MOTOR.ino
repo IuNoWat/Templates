@@ -1,5 +1,16 @@
 
 // PINS
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+int motor_1 = 46 ;
+
+
+
 int dir1 = 8 ;
 int dir2 = 9 ;
 int btn1 = 6;

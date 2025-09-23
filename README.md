@@ -42,6 +42,10 @@ To install it on a virtalenv, one must install :
 
 ## Arduino
 
+### FPS_example
+
+Example of the implementation of a FPS handler on arduino. The tic() method make the arduino wait the appropriate time to achieve the aimed FPS with the delay() method.
+
 ### SCREEN_OPEN412
 
 This examples work with this specific model of screen shield for arduino : https://www.lextronic.fr/ecran-graphique-tactile-arduino-open412-40425.html
