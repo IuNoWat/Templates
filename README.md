@@ -39,12 +39,56 @@ Since Bookworm, RPi.GPIO as been deprecated and we have to migrate to gpiozero :
 To install it on a virtalenv, one must install :
  - pip install gpiozero
  - pip install lgpio
+ - pip install rpi-lgpio
 
 ## Arduino
+
+### FPS_example
+
+Example of the implementation of a FPS handler on arduino. The tic() method make the arduino wait the appropriate time to achieve the aimed FPS with the delay() method.
+
+### SCREEN_OPEN412
+
+This examples work with this specific model of screen shield for arduino : https://www.lextronic.fr/ecran-graphique-tactile-arduino-open412-40425.html
+It's based on this very good tutorial : https://ouilogique.com/2-4-in_TFT_Touch_screen/
+As it says, you need to install 3 libraries in the arduino IDE (usually in "Documents/Arduino/libraries/ : 
+- git clone https://github.com/adafruit/Adafruit-GFX-Library.git
+- git clone https://github.com/adafruit/TFTLCD-Library.git
+- git clone https://github.com/adafruit/Adafruit_TouchScreen.git
 
 ## Godot
 
 ## RaspberryPi
+
+### SerialCom
+
+Example of communication through serial port between a raspi and an arduino.
+It uses pyserial on the py, install it with pip install pyserial
+
+It's doesn't work at all. fck this
+
+### Ecran LCD Rond
+This example work with this specific model of lcd round screen : https://www.lextronic.fr/afficheur-lcd-rond-128--78057.html
+There is in the folder a user manual that describe the installation process :
+- Activate SPI interface via sudo raspi-config
+- pip install Pillow
+- pip install numpy
+- sudo apt-get install libopenjp2-7
+- wget https://www.joy-it.net/files/files/Produkte/SBC-LCD1.28R/SBCLCD128R-RPi.zip
+- unzip SBC-LCD128R-RPi.zi
+- Do the connexions as statted in the manual, and the example SBC-LCD128R.py should work
+
+### Autostart on Raspberry
+- Create the file autostart.sh in Desktop and enter the bash command launching your app : /home/pi/Desktop/my_env_env/bin/python /home/pi/Desktop/my_app
+- Go in /etc/xdg/autostart
+- Create a .desktop file : sudo nano my_app.desktop
+- Enter the following lines :
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=my_app 
+Exec=bash /home/pi/Desktop/autostart.sh
+Type=Application
+Terminal=true
 
 ### WS2812
 
@@ -64,12 +108,18 @@ defaults.pcm.card 2
 defaults.ctl.card 2
 
 To check the audio output of the raspberry, use the command : aplay-l
-
 edit on 29/09/2025 : I couldn't have sound on a python script using pygame and ws281x as sudo. I had to change the default audio output in asound.conf to 1
 
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
+
+There is also a pilot based on gpiozero, buzzer_zero.py
+
+Remember, a buzzer can only be controlled via a PWM-friendly GPIO.
+On Raspberry 4, there are two PWM channel :
+- PWM0_0 available on GPIO 12, 18 or 52. (meaning GPIO12, GPIO18, etc)
+- PWM0_1 available on GPIO 13, 19, 45 or 53
 
 ### pyvideo
 

@@ -15,7 +15,7 @@ import music_bib
 
 #CONSTANTS
 os.system("sudo pigpiod") #pigpoid needs to be launched
-PIN=18
+PIN=12 #BOARD32
 PI=pigpio.pi()
 DEFAULT_OCTAVE= 6
 DEFAULT_DUTY = 50000 # 
