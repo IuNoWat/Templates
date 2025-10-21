@@ -109,6 +109,8 @@ defaults.ctl.card 2
 
 To check the audio output of the raspberry, use the command : aplay-l
 
+edit on 29/09/2025 : I couldn't have sound on a python script using pygame and ws281x as sudo. I had to change the default audio output in asound.conf to 1
+
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
