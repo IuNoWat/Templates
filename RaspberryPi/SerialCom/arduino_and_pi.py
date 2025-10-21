@@ -36,11 +36,11 @@ if __name__=="__main__" :
     while on :
         rah=Arduino()
         #rah.start()
-        rah.send_msg("0#")
+        rah.send_msg("coucou")
         time.sleep(2)
-        rah.send_msg("0#")
+        rah.send_msg("0")
         for i in range(0,10) :
-            time.sleep(2)
+            time.sleep(1)
             rah.send_msg(f"00:0{i+1}")
         rah.on=False
         #rah.join()
