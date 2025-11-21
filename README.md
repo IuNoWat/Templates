@@ -41,6 +41,15 @@ To install it on a virtalenv, one must install :
  - pip install lgpio
  - pip install rpi-lgpio
 
+### 2025_11_21
+
+Using GPIO in Raspberry OS is a PAIN IN THE ASS.
+- The above instructions wont work on a fresh raspi4 install for whatever reasons. I can't manage to install lgpio, anf it seems other API wont work without this (tried with RPi.GPIO), at least not for my use case (I'm working on M8 right now).
+- OK I got it now, here are the new working (I hope) instructions :
+  - Before installing through pip, you need to install lgpio via these instructions : https://abyz.me.uk/lg/download.html
+  - After you done so, pip install lgpio will work, and you will be able to use gpiozero
+  - For god's sake
+
 ## Arduino
 
 ### FPS_example
