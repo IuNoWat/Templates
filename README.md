@@ -69,6 +69,15 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 
 ## RaspberryPi
 
+### PiPresent
+
+PiPresents is a system used by museums to handle audiovisuals and slideshows based on RaspberryPi hardware.
+Official website : https://pipresents.wordpress.com/
+Github : https://github.com/KenT2/pipresents-gtk/tree/master
+Manual : file:///C:/Users/lorenzo.jacques/Downloads/manual.pdf
+
+It can be installed on bookworm OS (Warning : Legacy !) following the tutorial on the readme of the github page.
+
 ### SerialCom
 
 Example of communication through serial port between a raspi and an arduino.
