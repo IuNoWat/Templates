@@ -129,6 +129,23 @@ To check the audio output of the raspberry, use the command : aplay-l
 
 edit on 29/09/2025 : I couldn't have sound on a python script using pygame and ws281x as sudo. I had to change the default audio output in asound.conf to 1
 
+#### 2025_12_01
+According to the readme on the library, there are three different ways to command the ledstrip. The way used is defined by the used gpio :
+- PWM : GPIOs 12 and 18 for PWM0 and GPIO 13 for PWM1
+- PCM : PCM_DOUT, which can be set to use GPIO 21
+- SPI : GPIO10
+
+##### SPI
+The SPI way must be prefered unless specified otherwise. It allow to use the library without sudo usage and with access to all audio ports.
+
+BEWARE :
+On raspi4, you must set a fixed frequency to avoid the idle CPU scaling changing the SPI frequency and breaking the ws281x timings:
+Do this by adding the following lines to /boot/config.txt and reboot:
+ core_freq=500
+ core_freq_min=500
+
+
+
 ### Buzzer Passif
 
 The passive buzzer pilot is based on pigpiod : https://abyz.me.uk/rpi/pigpio/pigpiod.html
