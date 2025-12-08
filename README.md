@@ -68,7 +68,8 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 ## Godot
 
 ## RaspberryPi
-
+Tools :
+- gpioinfo (in command line) allows you to check wich gpio pins are used, and how
 ### PiPresent
 
 PiPresents is a system used by museums to handle audiovisuals and slideshows based on RaspberryPi hardware.
