@@ -70,6 +70,7 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 ## RaspberryPi
 Tools :
 - gpioinfo (in command line) allows you to check wich gpio pins are used, and how
+- https://pinout.xyz/ : best ool to check gpio numbers and what they can and can't do
 ### PiPresent
 
 PiPresents is a system used by museums to handle audiovisuals and slideshows based on RaspberryPi hardware.
