@@ -87,6 +87,12 @@ It uses pyserial on the py, install it with pip install pyserial
 
 It's doesn't work at all. fck this
 
+### Thermal Printer
+
+There is a really good tutorial about thermal printing on Adafruits : https://learn.adafruit.com/mini-thermal-receipt-printer/overview
+I also save the printer AP I wrote for MAISON - D.2.9 - IA.
+
+
 ### Ecran LCD Rond
 This example work with this specific model of lcd round screen : https://www.lextronic.fr/afficheur-lcd-rond-128--78057.html
 There is in the folder a user manual that describe the installation process :
