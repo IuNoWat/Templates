@@ -70,6 +70,7 @@ As it says, you need to install 3 libraries in the arduino IDE (usually in "Docu
 ## RaspberryPi
 Tools :
 - gpioinfo (in command line) allows you to check wich gpio pins are used, and how
+- https://pinout.xyz/ : best ool to check gpio numbers and what they can and can't do
 ### PiPresent
 
 PiPresents is a system used by museums to handle audiovisuals and slideshows based on RaspberryPi hardware.
@@ -85,6 +86,12 @@ Example of communication through serial port between a raspi and an arduino.
 It uses pyserial on the py, install it with pip install pyserial
 
 It's doesn't work at all. fck this
+
+### Thermal Printer
+
+There is a really good tutorial about thermal printing on Adafruits : https://learn.adafruit.com/mini-thermal-receipt-printer/overview
+I also save the printer AP I wrote for MAISON - D.2.9 - IA.
+
 
 ### Ecran LCD Rond
 This example work with this specific model of lcd round screen : https://www.lextronic.fr/afficheur-lcd-rond-128--78057.html
