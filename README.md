@@ -143,6 +143,9 @@ According to the readme on the library, there are three different ways to comman
 - PCM : PCM_DOUT, which can be set to use GPIO 21
 - SPI : GPIO10
 
+#### 2026_02_05
+I added a test to create a rainbow called test_rainbow.py
+
 ##### SPI
 The SPI way must be prefered unless specified otherwise. It allow to use the library without sudo usage and with access to all audio ports.
 
